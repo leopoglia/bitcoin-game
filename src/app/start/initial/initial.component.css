@@ -1,0 +1,99 @@
+body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url('https://st3.depositphotos.com/1340907/14598/v/600/depositphotos_145988365-stock-illustration-pixel-game-background.jpg');
+    background-repeat: repeat-x;
+    background-color: rgb(103, 59, 49);
+}
+
+.usuario{
+    position: absolute;
+    margin-left: 25px;
+}
+
+.icone img{
+    margin: 20px;
+    width: 50px;
+}
+
+.personagens{
+    margin-top: 10px;
+}
+
+.personagens,
+.personagem,
+.titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.personagens .personagem {
+    filter: grayscale(1);
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+    margin: 0px 30px;
+    border: 3px solid transparent;
+}
+
+#atual{
+    filter: grayscale(0);
+}
+
+.personagens #atual:hover {
+    transform: translateY(-3px);
+}
+
+.cadeado{
+    position: absolute;
+    width: 20px;
+}
+
+.titulo p {
+    font-size: 40px;
+    margin-top: 150px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.opcoes{
+    width: 100%;
+    display: grid;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.opcoes button{
+    font-size: 35px;
+    margin: 20px;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s;
+    border: 0;
+}
+
+.opcoes button:hover{
+    transform: scale(1.1);
+    color: rgb(238, 180, 20);
+}
+
+p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #fff;
+}
+
+.coracao{
+    width: 25px;
+    height: 25px;
+    margin: 0 5px;
+}

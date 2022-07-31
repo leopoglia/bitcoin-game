@@ -1,0 +1,81 @@
+* {
+    font-family: "Burbank";
+    user-select: none;
+}
+
+body {
+    padding: 50px;
+    height: 87vh;
+    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/65614919-0734-4dc8-9460-7034fd979346/dbg8qqd-0fb0aced-d05c-4df6-a7c6-b8e04c184ac5.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzY1NjE0OTE5LTA3MzQtNGRjOC05NDYwLTcwMzRmZDk3OTM0NlwvZGJnOHFxZC0wZmIwYWNlZC1kMDVjLTRkZjYtYTdjNi1iOGUwNGMxODRhYzUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.9IQbxC3HC3uuJLf8V9Ridq005b2_-4zFg6Cb9rJ2tbw');
+}
+
+.personagem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.personagem:hover {
+    transform: translateY(-3px);
+}
+
+#pane {
+    position: relative;
+    height: 100%;
+}
+
+#box {
+    position: relative;
+    width: 1px;
+    height: 1px;
+}
+
+#box .personagem img {
+    position: absolute;
+}
+
+.parede {
+    width: 100px;
+    height: 100px;
+    right: 0;
+    background-color: black;
+}
+
+.inimigos {
+    position: absolute;
+}
+
+.moeda img{
+    width: 50px;
+    height: 50px;
+}
+
+.moeda{
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    animation: moeda 2s infinite;
+}
+
+@keyframes moeda{
+    0%{
+        margin-top: 0px;
+    }
+    50%{
+        margin-top: 5px;
+    }
+    100%{
+        margin-top: 0%;
+    }
+}
+
+@keyframes inimigos {
+    0% {
+        right: 0;
+    }
+    100% {
+        right: 120%;
+    }
+}

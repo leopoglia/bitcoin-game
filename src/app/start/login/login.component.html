@@ -1,0 +1,20 @@
+<body>
+
+  <div class="titulo">
+    <p>digite seu nickname</p>
+  </div>
+
+
+  <div class="personagens">
+   <input type="text" [(ngModel)]="nickname" name="nickname">
+  </div>
+
+  <div class="opcoes">
+    <button (click)="entrar()">CONFIRMAR</button>
+  </div>
+
+  <div class="erro" *ngIf="erro"><p> digite um nickname!</p></div>
+
+  <p>feito com <img class="coracao" src="https://desenhando.erickfreire.com.br/wp-content/uploads/2021/05/Coracao.png" alt=""> por eduarda, leonardo e vytor.</p>
+
+</body>

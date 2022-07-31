@@ -1,0 +1,14 @@
+*{
+    user-select: none;
+    font-family: "Mario";
+}
+
+@font-face {
+    font-family: "Mario";
+    src: url("../src/app/imgs/Mario-Kart-DS.ttf");
+}
+
+body{
+    margin: 0;
+    overflow: hidden;
+}
