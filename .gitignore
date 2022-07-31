@@ -1,49 +1,39 @@
-#--------------------------#
-# Magento Default Files    #
-#--------------------------#
+# See http://help.github.com/ignore-files/ for more about ignoring files.
 
-/PATCH_*.sh
+# compiled output
+/dist
+/tmp
+/out-tsc
 
 # dependencies
 /node_modules
 
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
 
-/app/etc/local.xml
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 
-/media/*
-!/media/.htaccess
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
 
-!/media/customer
-/media/customer/*
-!/media/customer/.htaccess
-
-!/media/dhl
-/media/dhl/*
-!/media/dhl/logo.jpg
-
-!/media/downloadable
-/media/downloadable/*
-!/media/downloadable/.htaccess
-
-!/media/xmlconnect
-/media/xmlconnect/*
-
-!/media/xmlconnect/custom
-/media/xmlconnect/custom/*
-!/media/xmlconnect/custom/ok.gif
-
-!/media/xmlconnect/original
-/media/xmlconnect/original/*
-!/media/xmlconnect/original/ok.gif
-
-!/media/xmlconnect/system
-/media/xmlconnect/system/*
-!/media/xmlconnect/system/ok.gif
-
-/var/*
-!/var/.htaccess
-
-!/var/package
-/var/package/*
-!/var/package/*.xml
-
+# System Files
+.DS_Store
+Thumbs.db
