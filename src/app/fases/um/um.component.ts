@@ -9,12 +9,12 @@ import { Router } from '@angular/router';
 export class UmComponent implements OnInit {
 
   constructor(private Router: Router) {
-
   }
 
 
 
   ngOnInit() {
+
     for (let i = 0; i < 6; i++) {
       this.velocidade = Math.floor(Math.random() * 50);
       console.log(this.velocidade)
@@ -38,6 +38,7 @@ export class UmComponent implements OnInit {
     location.reload()
   }
 
+  nick = localStorage.getItem("nickname")
   velocidade;
   posicaoArvoresX;
   posicaoArvoresY;

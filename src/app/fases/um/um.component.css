@@ -158,6 +158,47 @@ button:hover {
     position: absolute;
 }
 
+.infos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    font-size: 30px;
+    color: #fff;
+}
+
+.infos div {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.infos .agrupamento{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(238, 180, 20);
+    border-radius: 5px;
+}
+
+.tempo,
+.moedas,
+.fase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.moedas img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
 @keyframes inimigos {
     0% {
         right: 0;

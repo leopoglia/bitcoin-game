@@ -14,6 +14,7 @@ export class AppComponent {
     this.audio.load();
     this.audio.play();
   }
+  nickname = localStorage.getItem("nickname");
   audio: any = new Audio();
 
 }
