@@ -7,17 +7,17 @@ body {
     background-color: rgb(103, 59, 49);
 }
 
-.usuario{
+.usuario {
     position: absolute;
     margin-left: 25px;
 }
 
-.icone img{
+.icone img {
     margin: 20px;
     width: 50px;
 }
 
-.personagens{
+.personagens {
     margin-top: 10px;
 }
 
@@ -40,7 +40,7 @@ body {
     border: 3px solid transparent;
 }
 
-#atual{
+#atual {
     filter: grayscale(0);
 }
 
@@ -48,7 +48,7 @@ body {
     transform: translateY(-3px);
 }
 
-.cadeado{
+.cadeado {
     position: absolute;
     width: 20px;
 }
@@ -60,7 +60,7 @@ body {
     border-radius: 5px;
 }
 
-.opcoes{
+.opcoes {
     width: 100%;
     display: grid;
     margin-top: 20px;
@@ -69,7 +69,12 @@ body {
     justify-content: center;
 }
 
-.opcoes button{
+.opcoes a {
+    width: 100%;
+}
+
+.opcoes button {
+    width: 100%;
     font-size: 35px;
     margin: 20px;
     background-color: transparent;
@@ -79,12 +84,12 @@ body {
     border: 0;
 }
 
-.opcoes button:hover{
+.opcoes button:hover {
     transform: scale(1.1);
     color: rgb(238, 180, 20);
 }
 
-p{
+p {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,7 +97,7 @@ p{
     color: #fff;
 }
 
-.coracao{
+.coracao {
     width: 25px;
     height: 25px;
     margin: 0 5px;

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-um',
@@ -7,15 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UmComponent implements OnInit {
 
-  constructor() {
+  constructor(private Router: Router) {
 
   }
 
 
 
   ngOnInit() {
-
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 6; i++) {
       this.velocidade = Math.floor(Math.random() * 50);
       console.log(this.velocidade)
       if (this.velocidade > 50) {
@@ -25,6 +25,7 @@ export class UmComponent implements OnInit {
         this.inimigos[i].style = `animation: inimigos linear infinite ${this.velocidade + 10}s; top: ${Math.floor(Math.random() * 400)}px;`;
       }
     }
+
   }
 
   moeda() {
@@ -33,7 +34,14 @@ export class UmComponent implements OnInit {
     }
   }
 
+  sim() {
+    location.reload()
+  }
+
   velocidade;
+  posicaoArvoresX;
+  posicaoArvoresY;
+  arvores:any = document.getElementsByClassName('arvores');
   inimigos: any = document.getElementsByClassName('inimigos');
 
 }
