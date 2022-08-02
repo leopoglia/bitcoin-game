@@ -33,9 +33,7 @@ $(function () {
     }
 
     function colisao() {
-        inimigos = document.querySelectorAll(".inimigos");
         for (let i = 0; i < inimigos.length; i++) {
-            console.log("inimigo" + (i + 1) + ": ", inimigos[i].getBoundingClientRect())
             inimigo = inimigos[i].getBoundingClientRect();
             perso = personagem.getBoundingClientRect();
 

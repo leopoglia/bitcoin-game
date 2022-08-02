@@ -41,7 +41,7 @@ export class UmComponent implements OnInit {
   velocidade;
   posicaoArvoresX;
   posicaoArvoresY;
-  arvores:any = document.getElementsByClassName('arvores');
+  arvores: any = document.getElementsByClassName('arvores');
   inimigos: any = document.getElementsByClassName('inimigos');
 
 }
