@@ -10,12 +10,13 @@ export class RankingComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log(this.ranking)
   }
 
   nickname = localStorage.getItem("nickname")
 
 
-  ranking= 
-    [{nome: 'leocpx', tempo: '5'}]
-  
+  ranking:any = JSON.parse(localStorage.getItem('lista'));
+  rankingcerto = this.ranking.sort();
+
 }

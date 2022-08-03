@@ -29,6 +29,18 @@ export class TempoComponent implements OnInit {
       if (localStorage.getItem('moedas') == "3") {
         this.tempo = this.segundostotal - this.segundos;
         localStorage.setItem('tempo', this.tempo);
+
+
+        if (this.wins == 1) {
+          console.log(this.ganhadores)
+
+          if(this.ganhadores == undefined){
+            this.ganhadores = []
+          }
+          this.ganhadores.push({ nome: this.nickname, tempo: this.tempo + 1 });
+          localStorage.setItem('lista', JSON.stringify(this.ganhadores));
+          this.wins = 0;
+        }
       }
 
 
@@ -42,7 +54,10 @@ export class TempoComponent implements OnInit {
     }, 1000)
   }
 
+  wins = 1;
+  ganhadores = JSON.parse(localStorage.getItem('lista'));
   morte: any = localStorage.setItem('morte', 'false');
+  nickname = localStorage.getItem('nickname')
   moedas: any = 0;
   tempo: any;
   interval;

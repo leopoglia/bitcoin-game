@@ -16,6 +16,7 @@ export class AppComponent {
   }
   nickname = localStorage.getItem("nickname");
   audio: any = new Audio();
+  
 
 }
 

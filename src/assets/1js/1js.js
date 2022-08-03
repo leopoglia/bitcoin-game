@@ -97,7 +97,6 @@ $(function () {
         for (let i = 0; i < bitcoin.length; i++) {
             moeda = bitcoin[i].getBoundingClientRect();
 
-
             if (perso.x < moeda.x + moeda.width &&
                 perso.x + perso.width > moeda.x &&
                 perso.y < moeda.y + moeda.height &&
@@ -107,12 +106,14 @@ $(function () {
                 bitcoin[i].style = "display: none"
 
                 if (moedas == bitcoin.length) {
-                    venceu = true;
+                    if (morte == false) {
+                        venceu = true;
 
-                    setTimeout(function () {
-                        document.querySelector("body > div.modalvenceu").style.display = "flex";
-                        localStorage.setItem("morte", "true");
-                    }, 500);
+                        setTimeout(function () {
+                            document.querySelector("body > div.modalvenceu").style.display = "flex";
+                            localStorage.setItem("morte", "true");
+                        }, 500);
+                    }
                 }
 
             }

@@ -31,18 +31,20 @@
 
       </table>
 
-      <table *ngFor="let item of ranking;" class="infos">
-        <tr>
-          <td>
-            leocpx
-          </td>
+      <div class="usuarios">
+        <table *ngFor="let item of rankingcerto;" class="infos">
+          <tr>
+            <td>
+              {{item.nome}}
+            </td>
 
-          <td>
-            15s
-          </td>
-        </tr>
+            <td>
+              {{item.tempo}}
+            </td>
+          </tr>
 
-      </table>
+        </table>
+      </div>
     </div>
   </div>
 
