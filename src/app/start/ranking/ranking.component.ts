@@ -16,9 +16,6 @@ export class RankingComponent implements OnInit {
 
 
   ranking= 
-    [{nome: 'leocpx', tempo: '5'},
-    {nome: 'leocpx', tempo: '5'},
-    {nome: 'leocpx', tempo: '5'},
-    {nome: 'leocpx', tempo: '5'}]
+    [{nome: 'leocpx', tempo: '5'}]
   
 }

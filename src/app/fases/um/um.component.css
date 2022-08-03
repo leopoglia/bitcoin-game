@@ -98,7 +98,7 @@ button:hover {
     }
 }
 
-.modal {
+.modal, .modalvenceu {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -112,6 +112,7 @@ button:hover {
     background: radial-gradient(circle, rgba(0, 0, 0, 0.322) 0%, rgba(2, 0, 36, 1) 100%);
 }
 
+
 .capa {
     width: 100%;
     height: 100%;
@@ -121,29 +122,29 @@ button:hover {
     top: 0;
 }
 
-.modal .gameover {
+.modal .gameover, .modalvenceu .gameover  {
     width: 400px;
     height: 400px;
     border-radius: 5px;
 }
 
 
-.modal .gameover .botoes {
+.modal .gameover .botoes, .modalvenceu .gameover .botoes  {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.modal .gameover .botoes button {
+.modal .gameover .botoes button, .modalvenceu .gameover .botoes button {
     font-size: 25px !important;
 }
 
-.modal .gameover .titulo {
+.modal .gameover .titulo, .modalvenceu .gameover .titulo {
     font-size: 55px;
     margin-bottom: 80px;
 }
 
-.modal .gameover p {
+.modal .gameover p, .modalvenceu .gameover p {
     margin: 20px;
     display: flex;
     align-items: center;

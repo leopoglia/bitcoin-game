@@ -62,4 +62,17 @@
     </div>
   </div>
 
+  <div class="modalvenceu">
+    <div class="gameover">
+      <p class="titulo">WIN!</p>
+      <p>tempo: {{tempo}}s</p>
+      <p>jogar de novo?</p>
+      <div class="botoes">
+        <button (click)="sim()">sim</button>
+        <button routerLink="/inicio">nao</button>
+      </div>
+
+    </div>
+  </div>
+
 </body>

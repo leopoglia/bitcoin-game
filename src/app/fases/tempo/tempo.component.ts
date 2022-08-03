@@ -19,12 +19,18 @@ export class TempoComponent implements OnInit {
     this.interval = setInterval(() => {
 
       this.morte = localStorage.getItem('morte');
-      console.log(localStorage.getItem('moedas'))
 
-      if(localStorage.getItem('moedas') == 'moedas'){
-      }else{
+      if (localStorage.getItem('moedas') == 'moedas') {
+        console.log("10")
+      } else {
         this.moedas = localStorage.getItem('moedas');
       }
+
+      if (localStorage.getItem('moedas') == "3") {
+        this.tempo = this.segundostotal - this.segundos;
+        localStorage.setItem('tempo', this.tempo);
+      }
+
 
       if (this.segundos > 0) {
         if (this.morte == "false") {
@@ -37,9 +43,11 @@ export class TempoComponent implements OnInit {
   }
 
   morte: any = localStorage.setItem('morte', 'false');
-  moedas:any = 0;
+  moedas: any = 0;
+  tempo: any;
   interval;
   segundos = 10;
+  segundostotal = 10;
 
 
 }

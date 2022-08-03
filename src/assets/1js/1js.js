@@ -9,7 +9,8 @@ $(function () {
         d = {},
         x = 5,
         morte = false,
-        moedas = 0;
+        venceu = false,
+        moedas = 0,
         velocidade = 0;
 
 
@@ -29,7 +30,7 @@ $(function () {
     function newh(v, a, b) {
         colisao();
         colisaobitcoin();
-        if (morte == false) {
+        if (morte == false && venceu == false) {
             var n = parseInt(v, 10) - (d[a] ? x : 0) + (d[b] ? x : 0);
 
             if (d[a] == true) {
@@ -44,14 +45,14 @@ $(function () {
     }
 
     function newv(v, a, b) {
-        if (morte == false) {
+        if (morte == false && venceu == false) {
             var n = parseInt(v, 10) - (d[a] ? x : 0) + (d[b] ? x : 0);
             return n < 0 ? 0 : n > wv ? wv : n;
         }
     }
 
     function animar() {
-        for(let i = 0; i < bitcoin.length; i++){
+        for (let i = 0; i < bitcoin.length; i++) {
             margintop = Math.floor(Math.random() * 500);
             marginleft = Math.floor(Math.random() * 1200);
             bitcoin[i].style = `margin-bottom: ${margintop}px !important; margin-left: ${marginleft}px;`
@@ -79,11 +80,14 @@ $(function () {
             if (perso.x < inimigo.x + inimigo.width &&
                 perso.x + perso.width > inimigo.x &&
                 perso.y < inimigo.y + inimigo.height &&
-                perso.y + perso.height > inimigo.y || localStorage.getItem("morte") == "true") {
-                personagem.style = 'transform: rotate(-270deg)';
-                document.querySelector("body > div.modal").style.display = "flex";
-                morte = true;
-                localStorage.setItem("morte", morte);
+                perso.y + perso.height > inimigo.y || (localStorage.getItem("morte") == "true")) {
+                if (venceu == false) {
+                    personagem.style = 'transform: rotate(-270deg)';
+                    document.querySelector("body > div.modal").style.display = "flex";
+                    morte = true;
+                    localStorage.setItem("morte", morte);
+                }
+
             }
         }
     }
@@ -93,6 +97,7 @@ $(function () {
         for (let i = 0; i < bitcoin.length; i++) {
             moeda = bitcoin[i].getBoundingClientRect();
 
+
             if (perso.x < moeda.x + moeda.width &&
                 perso.x + perso.width > moeda.x &&
                 perso.y < moeda.y + moeda.height &&
@@ -100,6 +105,16 @@ $(function () {
                 moedas++;
                 localStorage.setItem("moedas", moedas)
                 bitcoin[i].style = "display: none"
+
+                if (moedas == bitcoin.length) {
+                    venceu = true;
+
+                    setTimeout(function () {
+                        document.querySelector("body > div.modalvenceu").style.display = "flex";
+                        localStorage.setItem("morte", "true");
+                    }, 500);
+                }
+
             }
         }
     }

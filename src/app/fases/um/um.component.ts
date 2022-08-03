@@ -15,8 +15,15 @@ export class UmComponent implements OnInit {
 
   ngOnInit() {
     localStorage.setItem("moedas", '0');
-
+    this.startTimer();
   }
+
+  startTimer() {
+    this.interval = setInterval(() => {
+      this.tempo = localStorage.getItem('tempo')
+    }, 200)
+  }
+
 
   sim() {
     location.reload()
@@ -24,6 +31,8 @@ export class UmComponent implements OnInit {
 
   nick = localStorage.getItem("nickname")
   velocidade;
+  tempo;
+  interval;
   posicaoArvoresX;
   posicaoArvoresY;
   arvores: any = document.getElementsByClassName('arvores');
