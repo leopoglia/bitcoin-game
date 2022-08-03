@@ -17,6 +17,6 @@ export class RankingComponent implements OnInit {
 
 
   ranking:any = JSON.parse(localStorage.getItem('lista'));
-  rankingcerto = this.ranking.sort();
+  rankingcerto = this.ranking;
 
 }
