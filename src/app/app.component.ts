@@ -10,13 +10,10 @@ export class AppComponent {
   title = 'game';
 
   ngOnInit() {
-    this.audio.src = "../../../assets/minecraft.mp3";
-    this.audio.load();
-    this.audio.play();
+
   }
   nickname = localStorage.getItem("nickname");
-  audio: any = new Audio();
-  
+
 
 }
 
