@@ -67,12 +67,8 @@ var AppComponent = /** @class */ (function () {
     function AppComponent() {
         this.title = 'game';
         this.nickname = localStorage.getItem("nickname");
-        this.audio = new Audio();
     }
     AppComponent.prototype.ngOnInit = function () {
-        this.audio.src = "../../../assets/minecraft.mp3";
-        this.audio.load();
-        this.audio.play();
     };
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -356,7 +352,7 @@ var UmComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "body {\r\n    width: 100%;\r\n    min-height: 100vh;\r\n    margin: 0;\r\n    background-image: url('https://st3.depositphotos.com/1340907/14598/v/600/depositphotos_145988365-stock-illustration-pixel-game-background.jpg');\r\n    background-repeat: repeat-x;\r\n    background-color: rgb(103, 59, 49);\r\n}\r\n\r\n.usuario {\r\n    position: absolute;\r\n    margin-left: 25px;\r\n}\r\n\r\n.icone img {\r\n    margin: 20px;\r\n    width: 50px;\r\n}\r\n\r\n.personagens {\r\n    margin-top: 10px;\r\n}\r\n\r\n.personagens,\r\n.personagem,\r\n.titulo {\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n}\r\n\r\n.personagens .personagem {\r\n    -webkit-filter: grayscale(1);\r\n            filter: grayscale(1);\r\n    width: 100px;\r\n    height: 100px;\r\n    border-radius: 5px;\r\n    transition: 0.3s;\r\n    cursor: pointer;\r\n    margin: 0px 30px;\r\n    border: 3px solid transparent;\r\n}\r\n\r\n#atual {\r\n    -webkit-filter: grayscale(0);\r\n            filter: grayscale(0);\r\n}\r\n\r\n.personagens #atual:hover {\r\n    -webkit-transform: translateY(-3px);\r\n            transform: translateY(-3px);\r\n}\r\n\r\n.cadeado {\r\n    position: absolute;\r\n    width: 20px;\r\n}\r\n\r\n.titulo p {\r\n    font-size: 40px;\r\n    margin-top: 150px;\r\n    color: #fff;\r\n    border-radius: 5px;\r\n}\r\n\r\n.opcoes {\r\n    width: 100%;\r\n    display: -ms-grid;\r\n    display: grid;\r\n    margin-top: 20px;\r\n    margin-bottom: 20px;\r\n    align-items: center;\r\n    justify-content: center;\r\n}\r\n\r\n.opcoes a {\r\n    width: 100%;\r\n}\r\n\r\n.opcoes button {\r\n    width: 100%;\r\n    font-size: 35px;\r\n    margin: 20px 0px;\r\n    background-color: transparent;\r\n    color: #fff;\r\n    cursor: pointer;\r\n    transition: 0.2s;\r\n    border: 0;\r\n    outline: none;\r\n}\r\n\r\n.opcoes button:hover {\r\n    -webkit-transform: scale(1.1);\r\n            transform: scale(1.1);\r\n    color: rgb(238, 180, 20);\r\n}\r\n\r\np {\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    font-size: 20px;\r\n    color: #fff;\r\n}\r\n\r\n.coracao {\r\n    width: 25px;\r\n    height: 25px;\r\n    margin: 0 5px;\r\n}"
+module.exports = "body {\r\n    width: 100%;\r\n    min-height: 100vh;\r\n    margin: 0;\r\n    background-image: url('https://st3.depositphotos.com/1340907/14598/v/600/depositphotos_145988365-stock-illustration-pixel-game-background.jpg');\r\n    background-repeat: repeat-x;\r\n    background-color: rgb(103, 59, 49);\r\n}\r\n\r\n.usuario {\r\n    position: absolute;\r\n    margin-left: 25px;\r\n}\r\n\r\n.icone img {\r\n    margin: 20px;\r\n    width: 50px;\r\n}\r\n\r\n.personagens {\r\n    margin-top: 10px;\r\n}\r\n\r\n.personagens,\r\n.personagem,\r\n.titulo {\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n}\r\n\r\n.personagens .personagem {\r\n    -webkit-filter: grayscale(1);\r\n            filter: grayscale(1);\r\n    width: 100px;\r\n    height: 100px;\r\n    border-radius: 5px;\r\n    transition: 0.3s;\r\n    cursor: pointer;\r\n    margin: 0px 30px;\r\n    border: 3px solid transparent;\r\n}\r\n\r\n#atual {\r\n    -webkit-filter: grayscale(0);\r\n            filter: grayscale(0);\r\n}\r\n\r\n.personagens #atual:hover {\r\n    -webkit-transform: translateY(-3px);\r\n            transform: translateY(-3px);\r\n}\r\n\r\n.cadeado {\r\n    position: absolute;\r\n    width: 20px;\r\n}\r\n\r\n.titulo p {\r\n    font-size: 40px;\r\n    margin-top: 150px;\r\n    color: #fff;\r\n    border-radius: 5px;\r\n}\r\n\r\n.opcoes {\r\n    width: 100%;\r\n    display: -ms-grid;\r\n    display: grid;\r\n    margin-top: 20px;\r\n    margin-bottom: 20px;\r\n    align-items: center;\r\n    justify-content: center;\r\n}\r\n\r\n.opcoes a {\r\n    width: 100%;\r\n}\r\n\r\n.opcoes button {\r\n    width: 100%;\r\n    font-size: 35px;\r\n    margin: 20px 0px;\r\n    background-color: transparent;\r\n    color: #fff;\r\n    cursor: pointer;\r\n    transition: 0.2s;\r\n    border: 0;\r\n    outline: none; \r\n}\r\n\r\n.opcoes button:hover {\r\n    -webkit-transform: scale(1.1);\r\n            transform: scale(1.1);\r\n    color: rgb(238, 180, 20);\r\n}\r\n\r\np {\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    font-size: 20px;\r\n    color: #fff;\r\n}\r\n\r\n.coracao {\r\n    width: 25px;\r\n    height: 25px;\r\n    margin: 0 5px;\r\n}"
 
 /***/ }),
 
@@ -541,7 +537,7 @@ var RankingComponent = /** @class */ (function () {
     function RankingComponent() {
         this.nickname = localStorage.getItem("nickname");
         this.ranking = JSON.parse(localStorage.getItem('lista'));
-        this.rankingcerto = this.ranking.sort();
+        this.rankingcerto = this.ranking;
     }
     RankingComponent.prototype.ngOnInit = function () {
         console.log(this.ranking);
