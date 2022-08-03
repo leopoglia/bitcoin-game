@@ -14,6 +14,7 @@ export class UmComponent implements OnInit {
   segundos = 0;
 
   ngOnInit() {
+    localStorage.setItem("moedas", '0');
 
   }
 

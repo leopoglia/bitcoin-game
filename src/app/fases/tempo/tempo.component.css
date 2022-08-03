@@ -1,0 +1,25 @@
+.tempo,
+.moedas,
+.fase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 98px;
+    height: 56px;
+    border-radius: 5px;
+    background-image: url('/src/app/imgs/bau.png');
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.agrupamento {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.moedas img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}

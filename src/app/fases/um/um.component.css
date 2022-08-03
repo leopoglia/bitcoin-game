@@ -64,8 +64,7 @@ body {
 
 .moeda {
     position: absolute;
-    right: 0;
-    margin-right: 20px;
+    bottom: 0;
     cursor: pointer;
     animation: moeda 2s infinite;
 }

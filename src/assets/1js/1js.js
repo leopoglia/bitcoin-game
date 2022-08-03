@@ -1,5 +1,6 @@
 $(function () {
     var inimigos = document.getElementsByClassName('inimigos'),
+        bitcoin = document.getElementsByClassName('moeda'),
         pane = $('#pane'),
         box = $('#box'),
         personagem = document.querySelector("img"),
@@ -8,6 +9,7 @@ $(function () {
         d = {},
         x = 5,
         morte = false,
+        moedas = 0;
         velocidade = 0;
 
 
@@ -26,6 +28,7 @@ $(function () {
 
     function newh(v, a, b) {
         colisao();
+        colisaobitcoin();
         if (morte == false) {
             var n = parseInt(v, 10) - (d[a] ? x : 0) + (d[b] ? x : 0);
 
@@ -48,8 +51,14 @@ $(function () {
     }
 
     function animar() {
+        for(let i = 0; i < bitcoin.length; i++){
+            margintop = Math.floor(Math.random() * 500);
+            marginleft = Math.floor(Math.random() * 1200);
+            bitcoin[i].style = `margin-bottom: ${margintop}px !important; margin-left: ${marginleft}px;`
+        }
+
         for (let i = 0; i < inimigos.length; i++) {
-            
+
             velocidade = Math.floor(Math.random() * 50);
             if (velocidade > 50) {
                 inimigos[i].style = `animation: inimigos linear infinite ${velocidade}s; top: ${Math.floor(Math.random() * 400)}px;`;
@@ -75,6 +84,22 @@ $(function () {
                 document.querySelector("body > div.modal").style.display = "flex";
                 morte = true;
                 localStorage.setItem("morte", morte);
+            }
+        }
+    }
+
+    function colisaobitcoin() {
+
+        for (let i = 0; i < bitcoin.length; i++) {
+            moeda = bitcoin[i].getBoundingClientRect();
+
+            if (perso.x < moeda.x + moeda.width &&
+                perso.x + perso.width > moeda.x &&
+                perso.y < moeda.y + moeda.height &&
+                perso.y + perso.height > moeda.y) {
+                moedas++;
+                localStorage.setItem("moedas", moedas)
+                bitcoin[i].style = "display: none"
             }
         }
     }
