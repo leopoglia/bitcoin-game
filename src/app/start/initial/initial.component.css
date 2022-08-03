@@ -76,12 +76,13 @@ body {
 .opcoes button {
     width: 100%;
     font-size: 35px;
-    margin: 20px;
+    margin: 20px 0px;
     background-color: transparent;
     color: #fff;
     cursor: pointer;
     transition: 0.2s;
     border: 0;
+    outline: none;
 }
 
 .opcoes button:hover {

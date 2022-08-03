@@ -1,0 +1,101 @@
+body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url('https://st3.depositphotos.com/1340907/14598/v/600/depositphotos_145988365-stock-illustration-pixel-game-background.jpg');
+    background-repeat: repeat-x;
+    background-position-y: -120px;
+    background-color: rgb(103, 59, 49);
+    color: #fff;
+}
+
+
+.usuario {
+    position: absolute;
+    margin-left: 25px;
+}
+
+
+.titulo p {
+    font-size: 40px;
+    margin-top: 150px;
+    color: #fff;
+    border-radius: 5px;
+    margin-bottom: 100px;
+}
+
+p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #fff;
+}
+
+.background-ranking {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ranking {
+    width: 600px;
+    height: 400px;
+    border-radius: 5px;
+}
+
+.fases {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.fases button {
+    width: 200px;
+    margin-left: 15px !important;
+    font-size: 20px;
+    background-color: transparent;
+    color: #fff;
+    border: 0px;
+    cursor: pointer;
+    outline: none;
+}
+
+.fases button:hover {
+    color: rgb(238, 180, 20);
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.atual {
+    color: rgb(238, 180, 20);
+    transform: scale(1.1);
+}
+
+.infos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.infos tbody,
+.infos,
+.infos tr {
+    width: 100%;
+}
+
+.infos tr {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+.infos td {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+}

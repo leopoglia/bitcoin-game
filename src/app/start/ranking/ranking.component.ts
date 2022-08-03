@@ -12,4 +12,13 @@ export class RankingComponent implements OnInit {
   ngOnInit() {
   }
 
+  nickname = localStorage.getItem("nickname")
+
+
+  ranking= 
+    [{nome: 'leocpx', tempo: '5'},
+    {nome: 'leocpx', tempo: '5'},
+    {nome: 'leocpx', tempo: '5'},
+    {nome: 'leocpx', tempo: '5'}]
+  
 }

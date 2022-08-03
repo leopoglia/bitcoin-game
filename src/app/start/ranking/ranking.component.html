@@ -1,3 +1,49 @@
-<p>
-  ranking works!
-</p>
+<body>
+  <div class="usuario">
+    <p>{{nickname}}</p>
+  </div>
+
+  <div class="titulo">
+    <p>ranking</p>
+  </div>
+
+  <div class="background-ranking">
+    <div class="ranking">
+      <table class="fases">
+        <button>fase 1</button>
+        <button>fase 2</button>
+        <button>fase 3</button>
+        <button>fase 4</button>
+        <button>fase 5</button>
+        <button>fase 6</button>
+      </table>
+
+      <table class="infos">
+        <tr>
+          <td>
+            usuario
+          </td>
+
+          <td>
+            tempo
+          </td>
+        </tr>
+
+      </table>
+
+      <table *ngFor="let item of ranking;" class="infos">
+        <tr>
+          <td>
+            leocpx
+          </td>
+
+          <td>
+            15s
+          </td>
+        </tr>
+
+      </table>
+    </div>
+  </div>
+
+</body>
