@@ -1,13 +1,28 @@
 $(function () {
-    var inimigos = document.getElementsByClassName('inimigos'), 
-    pane = $('#pane'),
-    box = $('#box'),
-    personagem = document.querySelector("img"),
-    wh = pane.width() - box.width(),
-    wv = pane.height() - box.height(),
-    d = {},
-    x = 5;
-    morte = false;
+    var inimigos = document.getElementsByClassName('inimigos'),
+        pane = $('#pane'),
+        box = $('#box'),
+        personagem = document.querySelector("img"),
+        wh = pane.width() - box.width(),
+        wv = pane.height() - box.height(),
+        d = {},
+        x = 5,
+        morte = false,
+        velocidade = 0;
+
+
+
+    $(window).keydown(function (e) {
+        d[e.which] = true;
+    });
+    $(window).keyup(function (e) {
+        if (morte == false) {
+            d[e.which] = false;
+        }
+    });
+
+    animar();
+
 
     function newh(v, a, b) {
         colisao();
@@ -32,6 +47,21 @@ $(function () {
         }
     }
 
+    function animar() {
+        for (let i = 0; i < inimigos.length; i++) {
+            
+            velocidade = Math.floor(Math.random() * 50);
+            if (velocidade > 50) {
+                inimigos[i].style = `animation: inimigos linear infinite ${velocidade}s; top: ${Math.floor(Math.random() * 400)}px;`;
+
+            } else {
+                inimigos[i].style = `animation: inimigos linear infinite ${velocidade + 10}s; top: ${Math.floor(Math.random() * 400)}px;`;
+            }
+        }
+    }
+
+
+
     function colisao() {
         for (let i = 0; i < inimigos.length; i++) {
             inimigo = inimigos[i].getBoundingClientRect();
@@ -48,15 +78,6 @@ $(function () {
             }
         }
     }
-
-    $(window).keydown(function (e) {
-        d[e.which] = true;
-    });
-    $(window).keyup(function (e) {
-        if (morte == false) {
-            d[e.which] = false;
-        }
-    });
 
     setInterval(function () {
         box.css({

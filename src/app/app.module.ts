@@ -8,6 +8,7 @@ import { InitialComponent } from './start/initial/initial.component';
 import { UmComponent } from './fases/um/um.component';
 import { LoginComponent } from './start/login/login.component';
 import { RankingComponent } from './start/ranking/ranking.component';
+import { TempoComponent } from './fases/tempo/tempo.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -26,7 +27,8 @@ const routes: Routes = [
     InitialComponent,
     UmComponent,
     LoginComponent,
-    RankingComponent
+    RankingComponent,
+    TempoComponent
     
   ],
   imports: [
