@@ -7,10 +7,12 @@ import { AppComponent } from './app.component';
 import { InitialComponent } from './start/initial/initial.component';
 import { UmComponent } from './fases/um/um.component';
 import { LoginComponent } from './start/login/login.component';
+import { RankingComponent } from './start/ranking/ranking.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'inicio', component: InitialComponent},
+  { path: 'ranking', component: RankingComponent},
   {
     path: 'fase', children: [
       { path: '1', component: UmComponent }]
@@ -24,6 +26,7 @@ const routes: Routes = [
     InitialComponent,
     UmComponent,
     LoginComponent,
+    RankingComponent
     
   ],
   imports: [
