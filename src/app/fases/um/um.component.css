@@ -161,11 +161,11 @@ button:hover {
 .infos {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     position: absolute;
     bottom: 0;
-    font-size: 30px;
+    font-size: 20px;
     color: #fff;
 }
 
@@ -174,28 +174,21 @@ button:hover {
     margin-right: 20px;
 }
 
-.infos .agrupamento{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(238, 180, 20);
-    border-radius: 5px;
-}
-
 .tempo,
 .moedas,
 .fase {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 150px;
-    height: 50px;
+    width: 98px;
+    height: 56px;
     border-radius: 5px;
+    background-image: url('/src/app/imgs/bau.png');
 }
 
 .moedas img {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     margin-right: 10px;
 }
 
