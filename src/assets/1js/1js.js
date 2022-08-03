@@ -70,11 +70,11 @@ $(function () {
             if (perso.x < inimigo.x + inimigo.width &&
                 perso.x + perso.width > inimigo.x &&
                 perso.y < inimigo.y + inimigo.height &&
-                perso.y + perso.height > inimigo.y) {
-                document.querySelector("body");
+                perso.y + perso.height > inimigo.y || localStorage.getItem("morte") == "true") {
                 personagem.style = 'transform: rotate(-270deg)';
                 document.querySelector("body > div.modal").style.display = "flex";
                 morte = true;
+                localStorage.setItem("morte", morte);
             }
         }
     }

@@ -17,16 +17,20 @@ export class TempoComponent implements OnInit {
 
   startTimer() {
     this.interval = setInterval(() => {
+      this.morte = localStorage.getItem('morte');
       if (this.segundos > 0) {
-        this.segundos--;
+        if (this.morte == "false") {
+          this.segundos--;
+        }
       } else {
-        this.segundos = 60;
+        localStorage.setItem('morte', 'true');
       }
     }, 1000)
   }
 
+  morte: any = localStorage.setItem('morte', 'false');
   interval;
-  segundos = 100;
+  segundos = 10;
 
 
 }
