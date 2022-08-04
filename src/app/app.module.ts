@@ -9,14 +9,18 @@ import { UmComponent } from './fases/um/um.component';
 import { LoginComponent } from './start/login/login.component';
 import { RankingComponent } from './start/ranking/ranking.component';
 import { TempoComponent } from './fases/tempo/tempo.component';
+import { DoisComponent } from './fases/dois/dois.component';
+
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'inicio', component: InitialComponent},
-  { path: 'ranking', component: RankingComponent},
+  { path: 'inicio', component: InitialComponent },
+  { path: 'ranking', component: RankingComponent },
   {
     path: 'fase', children: [
-      { path: '1', component: UmComponent }]
+      { path: '1', component: UmComponent },
+      { path: '2', component: DoisComponent }
+    ]
   }
 
 ];
@@ -26,10 +30,11 @@ const routes: Routes = [
     AppComponent,
     InitialComponent,
     UmComponent,
+    DoisComponent,
     LoginComponent,
     RankingComponent,
     TempoComponent
-    
+
   ],
   imports: [
     BrowserModule,
@@ -40,7 +45,7 @@ const routes: Routes = [
   exports: [RouterModule],
   bootstrap: [AppComponent]
 })
-export class AppModule { 
+export class AppModule {
 
 
 }
