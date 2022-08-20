@@ -30,7 +30,6 @@ body {
 }
 
 .personagens .personagem {
-    filter: grayscale(1);
     width: 100px;
     height: 100px;
     border-radius: 5px;
@@ -40,8 +39,12 @@ body {
     border: 3px solid transparent;
 }
 
-#atual {
-    filter: grayscale(0);
+.personagens .personagem img{
+    filter: grayscale(1);
+}
+
+.atual {
+    filter: grayscale(0) !important;
 }
 
 .personagens #atual:hover {

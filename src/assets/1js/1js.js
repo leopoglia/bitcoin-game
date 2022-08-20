@@ -113,6 +113,27 @@ $(function () {
                             document.querySelector("body > div.modalvenceu").style.display = "flex";
                             localStorage.setItem("morte", "true");
                         }, 500);
+
+                        if (localStorage.getItem("nivel") == "null") {
+                            localStorage.setItem("nivel", "2");
+                        } else if (localStorage.getItem("nivel") == "2") {
+                            if (localStorage.getItem("level") == "2") {
+                                localStorage.setItem("nivel", "3");
+                            }
+                        } else if (localStorage.getItem("nivel") == "3") {
+                            if (localStorage.getItem("level") == "3") {
+                                localStorage.setItem("nivel", "4");
+                            }
+                        } else if (localStorage.getItem("nivel") == "4") {
+                            if (localStorage.getItem("level") == "4") {
+                                localStorage.setItem("nivel", "5");
+                            }
+                        } else if (localStorage.getItem("nivel") == "5") {
+                            if (localStorage.getItem("level") == "5") {
+                                localStorage.setItem("nivel", "6")
+                            }
+                        }
+
                     }
                 }
 

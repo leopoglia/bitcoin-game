@@ -10,8 +10,8 @@
 
 
   <div class="personagens">
-    <div class="personagem" id="atual">
-      <img src="https://i.imgur.com/JfLIZwh.png" alt="">
+    <div class="personagem">
+      <img class="atual" src="https://i.imgur.com/JfLIZwh.png" alt="">
     </div>
 
     <div class="personagem">
@@ -37,7 +37,7 @@
   </div>
 
   <div class="opcoes">
-    <a href="/fase/1"> <button>PLAY</button>
+    <a [href]="fase"> <button>PLAY</button>
     </a>
     <button routerLink="/ranking">RANKING</button>
     <button routerLink="">EXIT</button>
