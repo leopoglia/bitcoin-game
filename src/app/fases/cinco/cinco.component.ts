@@ -1,18 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-dois',
-  templateUrl: './dois.component.html',
-  styleUrls: ['./dois.component.css']
+  selector: 'app-cinco',
+  templateUrl: './cinco.component.html',
+  styleUrls: ['./cinco.component.css']
 })
-export class DoisComponent implements OnInit {
+export class CincoComponent implements OnInit {
 
   constructor() { }
 
+ 
   ngOnInit() {
     localStorage.setItem("moedas", '0');
     this.startTimer();
-    localStorage.setItem("level", "2");
+    localStorage.setItem("level", "5");
   }
 
   startTimer() {
@@ -30,5 +31,6 @@ export class DoisComponent implements OnInit {
   velocidade;
   tempo;
   interval;
+
 
 }

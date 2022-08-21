@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-dois',
-  templateUrl: './dois.component.html',
-  styleUrls: ['./dois.component.css']
+  selector: 'app-quatro',
+  templateUrl: './quatro.component.html',
+  styleUrls: ['./quatro.component.css']
 })
-export class DoisComponent implements OnInit {
+export class QuatroComponent implements OnInit {
 
   constructor() { }
 
   ngOnInit() {
     localStorage.setItem("moedas", '0');
     this.startTimer();
-    localStorage.setItem("level", "2");
+    localStorage.setItem("level", "4");
   }
 
   startTimer() {

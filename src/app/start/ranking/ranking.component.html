@@ -10,12 +10,12 @@
   <div class="background-ranking">
     <div class="ranking">
       <table class="fases">
-        <button>fase 1</button>
-        <button>fase 2</button>
-        <button>fase 3</button>
-        <button>fase 4</button>
-        <button>fase 5</button>
-        <button>fase 6</button>
+        <button (click)="fase(1)">fase 1</button>
+        <button (click)="fase(2)">fase 2</button>
+        <button (click)="fase(3)">fase 3</button>
+        <button (click)="fase(4)">fase 4</button>
+        <button (click)="fase(5)">fase 5</button>
+        <button (click)="fase(6)">fase 6</button>
       </table>
 
       <table class="infos">
@@ -32,7 +32,7 @@
       </table>
 
       <div class="usuarios">
-        <table *ngFor="let item of rankingcerto;" class="infos">
+        <table *ngFor="let item of rankingatual;" class="infos">
           <tr>
             <td>
               {{item.nome}}
@@ -40,6 +40,10 @@
 
             <td>
               {{item.tempo}}
+            </td>
+
+            <td>
+              {{item.fase}}
             </td>
           </tr>
 
