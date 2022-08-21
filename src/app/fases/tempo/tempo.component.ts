@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { url } from 'inspector';
 
 @Component({
   selector: 'app-tempo',
@@ -10,6 +11,27 @@ export class TempoComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+    console.log(this.fase)
+    if (this.fase == "2") {
+      this.segundos = 15;
+      this.segundostotal = 15;
+    } else if (this.fase == "3") {
+      this.segundos = 20;
+      this.segundostotal = 20;
+    } else if (this.fase == "4") {
+      this.segundos = 25;
+      this.segundostotal = 25;
+      this.segundostotal = 25;
+    } else if (this.fase == "5") {
+      this.segundos = 30;
+      this.segundostotal = 30;
+    } else if (this.fase == "6") {
+      this.segundos = 35;
+      this.segundostotal = 35;
+    }
+
+
     this.startTimer();
 
 
@@ -21,7 +43,6 @@ export class TempoComponent implements OnInit {
       this.morte = localStorage.getItem('morte');
 
       if (localStorage.getItem('moedas') == 'moedas') {
-        console.log("10")
       } else {
         this.moedas = localStorage.getItem('moedas');
       }
@@ -34,10 +55,10 @@ export class TempoComponent implements OnInit {
         if (this.wins == 1) {
           console.log(this.ganhadores)
 
-          if(this.ganhadores == undefined){
+          if (this.ganhadores == undefined) {
             this.ganhadores = []
           }
-          this.ganhadores.push({ nome: this.nickname, tempo: this.tempo + 1, fase: this.fase});
+          this.ganhadores.push({ nome: this.nickname, tempo: this.tempo, fase: this.fase });
           localStorage.setItem('lista', JSON.stringify(this.ganhadores));
           this.wins = 0;
         }

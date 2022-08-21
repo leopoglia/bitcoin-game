@@ -13,8 +13,6 @@ $(function () {
         moedas = 0,
         velocidade = 0;
 
-
-
     $(window).keydown(function (e) {
         d[e.which] = true;
     });
@@ -69,8 +67,6 @@ $(function () {
             }
         }
     }
-
-
 
     function colisao() {
         for (let i = 0; i < inimigos.length; i++) {
