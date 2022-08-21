@@ -39,7 +39,32 @@ export class InitialComponent implements OnInit {
       document.querySelector("body > div.personagens > div:nth-child(6) > img").classList.toggle("atual")
       this.fase = "fase/6";
     }
+  }
 
+  jogar(level) {
+    if (level == 1) {
+      this.fase = "fase/1"
+    } else if (level == 2 && (localStorage.getItem("nivel") == "2" ||
+      localStorage.getItem("nivel") == "3" ||
+      localStorage.getItem("nivel") == "4" ||
+      localStorage.getItem("nivel") == "5" ||
+      localStorage.getItem("nivel") == "6")) {
+      this.fase = "fase/2";
+    } else if (level == 3 && (localStorage.getItem("nivel") == "3" ||
+      localStorage.getItem("nivel") == "4" ||
+      localStorage.getItem("nivel") == "5" ||
+      localStorage.getItem("nivel") == "6")) {
+      this.fase = "fase/3";
+    } else if (level == 4 && (localStorage.getItem("nivel") == "4" ||
+      localStorage.getItem("nivel") == "5" ||
+      localStorage.getItem("nivel") == "6")) {
+      this.fase = "fase/4";
+    } else if (level == 5 && (localStorage.getItem("nivel") == "5" ||
+      localStorage.getItem("nivel") == "6")) {
+      this.fase = "fase/2";
+    } else if (level == 6 && (localStorage.getItem("nivel") == "6")) {
+      this.fase = "fase/6";
+    }
   }
 
   nickname = localStorage.getItem("nickname")
