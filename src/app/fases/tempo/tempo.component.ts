@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { url } from 'inspector';
 
 @Component({
   selector: 'app-tempo',
@@ -21,7 +20,6 @@ export class TempoComponent implements OnInit {
       this.segundostotal = 20;
     } else if (this.fase == "4") {
       this.segundos = 25;
-      this.segundostotal = 25;
       this.segundostotal = 25;
     } else if (this.fase == "5") {
       this.segundos = 30;
