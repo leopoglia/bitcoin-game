@@ -12,19 +12,19 @@ export class RankingComponent implements OnInit {
   ngOnInit() {
     this.rankingatual = this.ranking1;
 
-    for (let i = 0; i < this.rankingcerto.length; i++) {
-      if (this.rankingcerto[i].fase == 1) {
-        this.ranking1.push(this.rankingcerto[i]);
-      } else if (this.rankingcerto[i].fase == 2) {
-        this.ranking2.push(this.rankingcerto[i]);
-      } else if (this.rankingcerto[i].fase == 3) {
-        this.ranking3.push(this.rankingcerto[i]);
-      } else if (this.rankingcerto[i].fase == 4) {
-        this.ranking4.push(this.rankingcerto[i]);
-      } else if (this.rankingcerto[i].fase == 5) {
-        this.ranking5.push(this.rankingcerto[i]);
-      } else if (this.rankingcerto[i].fase == 6) {
-        this.ranking6.push(this.rankingcerto[i]);
+    for (let i = 0; i < this.rankings.length; i++) {
+      if (this.rankings[i].fase == 1) {
+        this.ranking1.push(this.rankings[i]);
+      } else if (this.rankings[i].fase == 2) {
+        this.ranking2.push(this.rankings[i]);
+      } else if (this.rankings[i].fase == 3) {
+        this.ranking3.push(this.rankings[i]);
+      } else if (this.rankings[i].fase == 4) {
+        this.ranking4.push(this.rankings[i]);
+      } else if (this.rankings[i].fase == 5) {
+        this.ranking5.push(this.rankings[i]);
+      } else if (this.rankings[i].fase == 6) {
+        this.ranking6.push(this.rankings[i]);
       }
     }
   }
@@ -52,9 +52,9 @@ export class RankingComponent implements OnInit {
   nickname = localStorage.getItem("nickname")
 
 
-  ranking: any = JSON.parse(localStorage.getItem('lista'));
-  rankingcerto = this.ranking;
-  rankingatual: any;
+  ranking = JSON.parse(localStorage.getItem('lista'));
+  rankings = this.ranking;
+  rankingatual;
   ranking1 = [];
   ranking2 = [];
   ranking3 = [];
