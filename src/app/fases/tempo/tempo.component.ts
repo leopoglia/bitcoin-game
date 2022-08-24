@@ -11,7 +11,6 @@ export class TempoComponent implements OnInit {
 
   ngOnInit() {
 
-    console.log(this.fase)
     if (this.fase == "2") {
       this.segundos = 9;
       this.segundostotal = 9;
@@ -51,8 +50,6 @@ export class TempoComponent implements OnInit {
 
 
         if (this.wins == 1) {
-          console.log(this.ganhadores)
-
           if (this.ganhadores == undefined) {
             this.ganhadores = []
           }
