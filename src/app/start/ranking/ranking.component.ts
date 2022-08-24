@@ -30,10 +30,6 @@ export class RankingComponent implements OnInit {
   }
 
   fase(fase) {
-
-    console.log(this.rankingatual);
-    console.log(this.ranking1)
-
     if (fase == 1) {
       this.rankingatual = this.ranking1;
     } else if (fase == 2) {
