@@ -13,20 +13,20 @@ export class TempoComponent implements OnInit {
 
     console.log(this.fase)
     if (this.fase == "2") {
-      this.segundos = 15;
-      this.segundostotal = 15;
+      this.segundos = 9;
+      this.segundostotal = 9;
     } else if (this.fase == "3") {
-      this.segundos = 20;
-      this.segundostotal = 20;
+      this.segundos = 8;
+      this.segundostotal = 8;
     } else if (this.fase == "4") {
-      this.segundos = 25;
-      this.segundostotal = 25;
+      this.segundos = 7;
+      this.segundostotal = 7;
     } else if (this.fase == "5") {
-      this.segundos = 30;
-      this.segundostotal = 30;
+      this.segundos = 6;
+      this.segundostotal = 6;
     } else if (this.fase == "6") {
-      this.segundos = 35;
-      this.segundostotal = 35;
+      this.segundos = 5;
+      this.segundostotal = 5;
     }
 
 
